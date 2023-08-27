@@ -1,0 +1,11 @@
+<p>Add Post</p>
+<button (click)="ToggleDisplay()">Show/Hide Form</button>
+<div *ngIf="display">
+<app-post-form (PostCreated)="AddPost($event)"></app-post-form>
+</div>
+
+
+<br>
+
+<p>All Posts</p>
+<app-single-post *ngFor="let p of posts" [singlePost]="p"></app-single-post>
