@@ -10,8 +10,22 @@ export class PostFormComponent {
   newPost:Post = {} as Post;
   @Output() PostCreated = new EventEmitter<Post>();
 
-  SubmitPost():void{
+  submitPost():void{
+    this.newPost.votes = 0;
     this.PostCreated.emit(this.newPost);
     this.newPost = {} as Post;
   }
+
+  // submitPost():void{
+  //   //{... this.newPost} automatically assigns properties
+  //   let result:Post = {... this.newPost};
+  //   this.PostCreated.emit(result);
+  // }
+
+   // displayForm:boolean = false;
+
+  // toggleForm():void{
+  //   this.displayForm = !this.displayForm;
+  // }
+
 }

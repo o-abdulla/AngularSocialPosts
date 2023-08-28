@@ -1,3 +1,5 @@
+<div>
+<h1>My Thoughts</h1>
 <h2>Add Post</h2>
 <button (click)="ToggleDisplay()">Show/Hide Form</button>
 <div *ngIf="display">
@@ -9,5 +11,6 @@
 <br>
 <br>
 
-<h1>All Posts</h1>
-<app-single-post *ngFor="let p of posts" [singlePost]="p"></app-single-post>
+<h2>All Posts</h2>
+<app-single-post (delete)="RemovePost($event)" *ngFor="let p of GetPostsByNewest()" [post]="p"></app-single-post>
+</div>

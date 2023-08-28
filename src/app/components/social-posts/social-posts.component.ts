@@ -7,23 +7,29 @@ import { Post } from 'src/app/models/post';
   styleUrls: ['./social-posts.component.css']
 })
 export class SocialPostsComponent {
-posts:Post[] = [
+allPosts:Post[] = [
   {
     title: "Grand Circus",
-    thought: "Grand Circus is cool"
+    thought: "Grand Circus is cool",
+    votes: 9001,
+    image: ""
   },
   {
     title: "Ritual",
-    thought: "Ritual is a well developed app"
+    thought: "Ritual is a well developed app",
+    votes: -1,
+    image: ""
   },
   {
     title: "Scott",
-    thought: "Scott rides scooters"
+    thought: "Scott rides scooters",
+    votes: 5,
+    image: ""
   }
 ];
 
 AddPost(post:Post):void{
-  this.posts.push(post);
+  this.allPosts.push(post);
 }
 
 display:boolean = false;
@@ -31,5 +37,13 @@ ToggleDisplay():void{
   this.display = !this.display
 }
 
+RemovePost(target:Post):void{
+  let index:number = this.allPosts.findIndex((p:Post) => p == target);
+  this.allPosts.splice(index,1);
+}
+
+GetPostsByNewest():Post[]{
+  return this.allPosts.reverse();
+}
 
 }

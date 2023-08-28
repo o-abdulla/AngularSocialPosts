@@ -1,6 +1,9 @@
-<form (ngSubmit)="SubmitPost()">
+<div>
+<form (ngSubmit)="submitPost()">
     <br>
     <input type = "text" placeholder="Title" [(ngModel)]="newPost.title" name="Title"> &nbsp;
     <input type = "text" placeholder="Thought" [(ngModel)]="newPost.thought" name="Thought"> &nbsp;
-    <button type="submit">add post</button>
+    <input type = "text" placeholder="Image" [(ngModel)]="newPost.image" name="Image"> &nbsp;
+    <button type="submit">Add Post</button>
 </form>
+</div>
