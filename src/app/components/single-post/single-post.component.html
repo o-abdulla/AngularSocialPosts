@@ -1,7 +1,7 @@
-<h2><button (click)="addVote()">{{ post.votes }}</button> {{ post.title }}</h2>
-<p>{{ post.thought }}</p>
+<h2><button class="vote-tally" (click)="addVote()">{{ post.votes }}</button> {{ post.title }}</h2>
+<p>{{ post.thought }} &nbsp; &nbsp; <i (click)="remove()" class="fa-solid fa-trash-can"></i></p>
 <img height="100px" src="{{ post.image }}" />
 <!-- <p (click)="remove()">x</p> -->
 <!-- <button (click)="remove()">x</button> -->
-<i (click)="remove()" class="fa-solid fa-trash-can"></i>
+
 <br>

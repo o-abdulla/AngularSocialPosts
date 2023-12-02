@@ -1,3 +1,39 @@
 div {
     background-color: #F3F1F7;
 }
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0);
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+.dark-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode h1 {
+    color: aqua;
+}
+

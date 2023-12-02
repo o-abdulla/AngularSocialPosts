@@ -28,6 +28,8 @@ allPosts:Post[] = [
   }
 ];
 
+darkMode:boolean = false;
+
 AddPost(post:Post):void{
   this.allPosts.push(post);
 }
@@ -44,6 +46,10 @@ RemovePost(target:Post):void{
 
 GetPostsByNewest():Post[]{
   return this.allPosts.reverse();
+}
+
+invertColors():void{
+  this.darkMode = !this.darkMode;
 }
 
 }

@@ -1,7 +1,14 @@
 <div>
-<h1>My Thoughts</h1>
-<h2>Add Post</h2>
-<button (click)="ToggleDisplay()">Show/Hide Form</button>
+
+<!-- <app-dark-mode class="darkmode"></app-dark-mode>  -->
+
+<div [ngClass]="{'dark-mode': darkMode}">
+    <button class="dark-button" (click)="invertColors()">Toggle Dark Mode</button>
+
+    <h1>My Thoughts</h1>
+
+    <h2>Add Post</h2>
+<button (click)="ToggleDisplay()">Show / Hide Form</button>
 <div *ngIf="display">
 <app-post-form (PostCreated)="AddPost($event)"></app-post-form>
 </div>
@@ -14,3 +21,6 @@
 <h2>All Posts</h2>
 <app-single-post (delete)="RemovePost($event)" *ngFor="let p of GetPostsByNewest()" [post]="p"></app-single-post>
 </div>
+
+</div>
+

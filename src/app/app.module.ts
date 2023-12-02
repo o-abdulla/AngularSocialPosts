@@ -7,12 +7,13 @@ import { SinglePostComponent } from './components/single-post/single-post.compon
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SocialPostsComponent,
     SinglePostComponent,
-    PostFormComponent
+    PostFormComponent,
   ],
   imports: [
     BrowserModule,

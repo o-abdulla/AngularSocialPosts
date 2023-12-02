@@ -15,4 +15,19 @@ input {
 
 button {
     width: 100%;
+    transition-duration: 0.4s;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+::placeholder {
+    text-align: center;
 }
